@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  * Entity-Klasse für (versicherte) Person
@@ -27,6 +29,7 @@ public class PersonEntity implements Serializable {
     private String officialName;
     
     // Geburtsdatum
+    @Temporal(TemporalType.DATE)
     private Date dateOfBirth;
     
     // Referenz auf eine Adresse
